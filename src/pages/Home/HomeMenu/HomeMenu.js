@@ -3,7 +3,7 @@ import { Tabs } from 'antd';
 
 const { TabPane } = Tabs;
 
-export default class Demo extends React.Component {
+export default class Demo extends React.PureComponent {
     state = {
         tabPosition: 'left',
     };
