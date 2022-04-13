@@ -17,12 +17,12 @@ export default class Demo extends React.PureComponent {
     renderHeThongRap = () => {
         return this.props.heThongRapChieu?.map((heThongRap, index) => {
             let { tabPosition } = this.state;
-            return <TabPane tab={<img src={heThongRap.logo} className="rounded-full" width="50" />} key={index}>
+            return <TabPane tab={<img src={heThongRap.logo} className="rounded-full" width="50" alt=""/>} key={index}>
                 <Tabs tabPosition={tabPosition}>
                     {heThongRap.lstCumRap?.map((cumRap, index) => {
                         return <TabPane tab={
                             <div style={{ width: '300px', display: 'flex' }} >
-                                <img src={heThongRap.logo} width="50" /> <br />
+                                <img src={heThongRap.logo} width="50" alt=""/> <br />
                                 <div className="text-left ml-2">
                                     {cumRap.tenCumRap}
                                     <p className="text-red-200">Chi tiết</p>
