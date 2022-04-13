@@ -10,9 +10,10 @@ import Register from './pages/Register/Register';
 import Detail from './pages/Detail/Detail';
 import CheckoutTemplate from './template/CheckoutTemplate/CheckoutTemplate';
 import Checkout from './pages/Checkout/Checkout';
-import {Suspense,lazy} from 'react';
+import { UserTemplate } from './template/UserTemplate/UserTemplate';
+// import {Suspense,lazy} from 'react';
 export const history = createBrowserHistory();
-const CheckoutTemplateLazy = lazy(() => import('./template/CheckoutTemplate/CheckoutTemplate'));
+// const CheckoutTemplateLazy = lazy(() => import('./template/CheckoutTemplate/CheckoutTemplate'));
 function App() {
   return (
     <Router history={history}>
@@ -22,13 +23,13 @@ function App() {
         <HomeTemplate path="/contact" exact Component={Contact} />
         <HomeTemplate path="/news" exact Component={News} />
         <HomeTemplate path="/detail/:id" exact Component={Detail} />
-        <Route path="/login" exact Component={Login} />
+        <UserTemplate path="/login" exact Component={Login} />
         <Route path="/register" exact Component={Register} />
         {/* <Suspense> gan loadding khi chua load xong */}
-        <Suspense fallback={<h1>loading ...</h1>}>
+        {/* <Suspense fallback={<h1>loading ...</h1>}>
           <CheckoutTemplateLazy path="/checkout/:id" exact Component={Checkout} />  
-
-        </Suspense>
+        </Suspense> */}
+        <CheckoutTemplate path="/checkout/:id" exact Component={Checkout} />
       </Switch>
     </Router>
   );

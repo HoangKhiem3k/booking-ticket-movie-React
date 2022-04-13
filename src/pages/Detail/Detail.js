@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react'
-import { Button, CustomCard } from '@tsamantanis/react-glassmorphism'
+import { CustomCard } from '@tsamantanis/react-glassmorphism'
 import '@tsamantanis/react-glassmorphism/dist/index.css'
 import '../../assets/styles/circle.scss'
-import { Tabs, Radio, Space, Rate } from 'antd';
+import { Tabs, Rate } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
-import { SET_CHI_TIET_PHIM } from '../../redux/types/QuanLyRapType';
 import { layThongTinChiTietPhim } from '../../redux/actions/QuanLyRapActions';
 import moment from 'moment'; //npm i moment
-import { StarFilled, StarOutlined } from '@ant-design/icons';
 import { NavLink } from 'react-router-dom';
 const { TabPane } = Tabs;
 

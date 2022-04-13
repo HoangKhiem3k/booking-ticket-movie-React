@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
-import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import styleSlick from './MultipleRowSlick.module.css';
-import Film from '../Film/Film'
 import Film_Flip from "../Film/Film_Flip";
 import { useDispatch,useSelector } from "react-redux";
 import { SET_FILM_DANG_CHIEU, SET_FILM_SAP_CHIEU } from "../../redux/types/QuanLyPhimType";

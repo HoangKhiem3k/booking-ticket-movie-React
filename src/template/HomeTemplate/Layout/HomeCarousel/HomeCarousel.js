@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Carousel } from 'antd';
 import { useSelector,useDispatch } from 'react-redux'
 
-import axios from 'axios'
 import { getCarouselAction } from '../../../../redux/actions/CarouselActions';
 import './HomeCarousel.css';
 

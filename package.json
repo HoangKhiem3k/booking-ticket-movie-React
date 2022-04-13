@@ -9,6 +9,7 @@
     "@tsamantanis/react-glassmorphism": "^1.1.2",
     "antd": "^4.15.1",
     "axios": "^0.21.1",
+    "formik": "^2.2.9",
     "history": "^4.10.0",
     "install": "^0.13.0",
     "lodash": "^4.17.21",
@@ -25,7 +26,8 @@
     "redux-thunk": "^2.3.0",
     "sass-loader": "^12.6.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",
