@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aspnet/signalr": "^1.0.27",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -11,6 +12,7 @@
     "axios": "^0.21.1",
     "formik": "^2.2.9",
     "history": "^4.10.0",
+    "i": "^0.3.7",
     "install": "^0.13.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.2",
