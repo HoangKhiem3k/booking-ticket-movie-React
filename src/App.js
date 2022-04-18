@@ -10,6 +10,7 @@ import Register from './pages/Register/Register';
 import Detail from './pages/Detail/Detail';
 import CheckoutTemplate from './template/CheckoutTemplate/CheckoutTemplate';
 import Checkout from './pages/Checkout/Checkout';
+import Profile from './pages/Profile/Profile';
 import { UserTemplate } from './template/UserTemplate/UserTemplate';
 import Loading from './components/Loading/Loading';
 // import {Suspense,lazy} from 'react';
@@ -26,7 +27,8 @@ function App() {
         <HomeTemplate path="/news" exact Component={News} />
         <HomeTemplate path="/detail/:id" exact Component={Detail} />
         <UserTemplate path="/login" exact Component={Login} />
-        <Route path="/register" exact Component={Register} />
+        <UserTemplate path="/register" exact Component={Register} />
+        <HomeTemplate path="/profile" exact Component={Profile} />
         {/* <Suspense> gan loadding khi chua load xong */}
         {/* <Suspense fallback={<h1>loading ...</h1>}>
           <CheckoutTemplateLazy path="/checkout/:id" exact Component={Checkout} />  
