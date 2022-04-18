@@ -7,7 +7,8 @@ import { Provider } from 'react-redux';
 import { store } from './redux/configStore';
 //antd
 import "antd/dist/antd.css";
-
+//Import đa ngôn ngữ
+import './i18n';
 //reactslick
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
