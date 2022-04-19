@@ -1,6 +1,6 @@
 import './App.css';
 import { createBrowserHistory } from 'history';
-import { Route, Router, Switch } from 'react-router';
+import {  Router, Switch } from 'react-router';
 import { HomeTemplate } from './template/HomeTemplate/HomeTemplate'
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
@@ -13,6 +13,9 @@ import Checkout from './pages/Checkout/Checkout';
 import Profile from './pages/Profile/Profile';
 import { UserTemplate } from './template/UserTemplate/UserTemplate';
 import Loading from './components/Loading/Loading';
+import AdminTemplate from './template/AdminTemplate.js/AdminTemplate';
+import Films from './pages/Admin/Films/Films';
+import AddNew from './pages/Admin/Films/AddNew/AddNew'
 // import {Suspense,lazy} from 'react';
 export const history = createBrowserHistory();
 // const CheckoutTemplateLazy = lazy(() => import('./template/CheckoutTemplate/CheckoutTemplate'));
@@ -34,6 +37,9 @@ function App() {
           <CheckoutTemplateLazy path="/checkout/:id" exact Component={Checkout} />  
         </Suspense> */}
         <CheckoutTemplate path="/checkout/:id" exact Component={Checkout} />
+
+        <AdminTemplate path="/admin/films" exact Component={Films} />
+        <AdminTemplate path="/admin/films/addnew" exact Component={AddNew} />
       </Switch>
     </Router>
   );
