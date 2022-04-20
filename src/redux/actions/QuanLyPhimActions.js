@@ -5,13 +5,13 @@ import { SET_DANH_SACH_PHIM, SET_THONG_TIN_PHIM } from "../types/QuanLyPhimType"
 
 
 
-export const layDanhSachPhimAction = () => {
+export const layDanhSachPhimAction = (tenPhim='') => {
     
 
     return async (dispatch) => {
         try {
             //Sử dụng tham số thamSo
-            const result = await quanLyPhimService.layDanhSachPhim();
+            const result = await quanLyPhimService.layDanhSachPhim(tenPhim);
 
             //Sau khi lấy dữ liệu từ api về => redux (reducer)
              dispatch({

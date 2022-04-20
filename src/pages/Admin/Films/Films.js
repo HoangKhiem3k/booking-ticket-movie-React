@@ -94,7 +94,10 @@ export default function Films() {
 
     
 
-    const onSearch = value => console.log(value);
+    const onSearch = value => {
+        console.log('value',value);
+        dispatch(layDanhSachPhimAction(value));
+    };
 
     function onChange(pagination, filters, sorter, extra) {
         console.log('params', pagination, filters, sorter, extra);
