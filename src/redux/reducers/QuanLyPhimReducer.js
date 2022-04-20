@@ -1,4 +1,4 @@
-import { SET_DANH_SACH_PHIM, SET_FILM_DANG_CHIEU, SET_FILM_SAP_CHIEU } from "../types/QuanLyPhimType";
+import { SET_DANH_SACH_PHIM, SET_FILM_DANG_CHIEU, SET_FILM_SAP_CHIEU, SET_THONG_TIN_PHIM } from "../types/QuanLyPhimType";
 import { SET_CHI_TIET_PHIM } from "../types/QuanLyRapType";
 
 
@@ -38,7 +38,7 @@ const stateDefault = {
     sapChieu:true,
     arrFilmDefault: [],
     filmDetail: {},
-
+    thongTinPhim: {},
 }
 
 export const QuanLyPhimReducer = (state=stateDefault,action ) => {
@@ -65,7 +65,10 @@ export const QuanLyPhimReducer = (state=stateDefault,action ) => {
             state.filmDetail = action.filmDetail;
             return {...state}
         }
-
+        case SET_THONG_TIN_PHIM:{
+            state.thongTinPhim = action.thongTinPhim;
+            return {...state}
+        }
         default : return {...state}
     }
 }
