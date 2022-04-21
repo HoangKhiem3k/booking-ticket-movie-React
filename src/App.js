@@ -17,6 +17,7 @@ import AdminTemplate from './template/AdminTemplate.js/AdminTemplate';
 import Films from './pages/Admin/Films/Films';
 import AddNew from './pages/Admin/Films/AddNew/AddNew'
 import Edit from './pages/Admin/Films/Edit/Edit';
+import ShowTime from './pages/Admin/Showtime/ShowTime';
 // import {Suspense,lazy} from 'react';
 export const history = createBrowserHistory();
 // const CheckoutTemplateLazy = lazy(() => import('./template/CheckoutTemplate/CheckoutTemplate'));
@@ -41,6 +42,7 @@ function App() {
 
         <AdminTemplate path="/admin/films" exact Component={Films} />
         <AdminTemplate path="/admin/films/addnew" exact Component={AddNew} />
+        <AdminTemplate path="/admin/films/showtime/:id/:tenphim" exact Component={ShowTime} />
         <AdminTemplate path="/admin/films/edit/:id" exact Component={Edit} />
       </Switch>
     </Router>
