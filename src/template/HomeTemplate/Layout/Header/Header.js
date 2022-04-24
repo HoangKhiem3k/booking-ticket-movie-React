@@ -23,7 +23,10 @@ export default function Header(props) {
                         history.push('/login')
                     }} className="self-center px-8 py-3 rounded">{t('signin')}</button>
                     <button onClick={()=>{
-                        history.push('/register')
+                        history.push({
+                            pathname:'/register',
+                            state:history.location.pathname
+                        })
                     }} className="self-center px-8 py-3 font-semibold rounded bg-violet-600 text-coolGray-50">{t('signup')}</button>
             </Fragment>
         }
@@ -35,7 +38,7 @@ export default function Header(props) {
                 localStorage.removeItem(TOKEN);
                 history.push('/home');
                 window.location.reload();
-            }} className="text-yellow-500 mr-5">Đăng xuất</button>
+            }} className="text-yellow-500 mr-5">{t('logout')}</button>
         </Fragment>
 
     }
